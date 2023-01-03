@@ -212,7 +212,7 @@ a {
   margin: -24px 0 -200px 24px;
 }
 
-.info-display div {
+.info-display > div {
   height: 10%;
 }
 .grid,
@@ -243,15 +243,14 @@ a {
     border-left: 15px solid black;
   }
 }
-.button a, .button .start-game {
+.start-game, .reset-game {
   display: block;
   width: 190px;
   height: 58px;
-  margin-bottom: 15px;
-  padding: 20px 25px 0 0;
+
   border-radius: 26px;
   background-color: #78f;
-  text-align: right;
+  text-align: center;
   line-height: normal !important;
   text-decoration: none;
   text-transform: uppercase;
@@ -261,11 +260,10 @@ a {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-.start-game {
-  border: none;
   font-size: 0.9rem;
+  border: none;
 }
+
 .button#top-left a {
   background-color: #78f;
 }

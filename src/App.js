@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./header/header";
 import Display from "./display/display";
+import resetGame from "./helpers/resetGame";
 
 const App = () => {
   const [gameActive, setGameActive] = useState(false);
@@ -18,6 +19,7 @@ const App = () => {
         currentScore={currentScore}
         highScore={highScore}
         highestLevel={highestLevel}
+        resetGame={resetGame}
       />
       <Display />
     </div>

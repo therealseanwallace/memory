@@ -38,16 +38,15 @@ const Header = (props) => {
                   type="button"
                 />
               </div>
-              <div className="button" id="bottom-left">
-                <a href="">02</a>
-              </div>
             </div>
             <div className="button-col">
               <div className="button" id="top-right">
-                <a href="">03</a>
-              </div>
-              <div className="button" id="bottom-right">
-                <a href="">04</a>
+              <input
+                  className="reset-game"
+                  value="Reset Game"
+                  onClick={() => props.resetGame()}
+                  type="button"
+                />
               </div>
             </div>
           </div>
