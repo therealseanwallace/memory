@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import Header from "./header/header";
+import Display from "./display/display";
 
 const App = () => {
-
-  return(
-    <Header />
-  )
-}
+  return (
+    <div>
+      <Header />
+      <Display />
+    </div>
+  );
+};
 
 export default App;
