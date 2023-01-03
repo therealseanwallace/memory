@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const App = () => {
+const ShowInstructions = () => {
 
   return(
     <div />
   )
 }
+
+export default ShowInstructions;

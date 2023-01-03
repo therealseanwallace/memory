@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-const App = () => {
+const CardContainer = () => {
 
   return(
     <div />
   )
 }
+
+export default cardContainer;
