@@ -31,9 +31,7 @@ An array of objects which store the potential cards
 
 Step-by-step:
 
-1. Create app.js which will contain just the header and game container components
 
-2. Create header.js which will render the header of the LCARS interface
 
 3. Create infoDisplay.js
 
@@ -58,4 +56,8 @@ Step-by-step:
 13. card.js
 
 14. gameOver.js
+
+1. Create app.js which will contain just the header and game container components
+
+2. Create header.js which will render the header of the LCARS interface
 

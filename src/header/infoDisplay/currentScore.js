@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const CurrentScore = () => {
+const CurrentScore = (props) => {
 
   return(
-    <div />
+    <div>
+      <h4 className={"current-score"}>Current score: {props.currentScore}</h4>
+    </div>
   )
 }
 
