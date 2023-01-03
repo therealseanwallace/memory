@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './resources/lcars-classic.css'
+import './assets/lcars-classic.css'
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
