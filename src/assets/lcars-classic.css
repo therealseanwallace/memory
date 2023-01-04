@@ -264,6 +264,10 @@ a {
   border: none;
 }
 
+.game {
+  display: flex;
+}
+
 .button#top-left a {
   background-color: #78f;
 }
@@ -445,9 +449,9 @@ a {
 .content > *:first-child {
   margin-top: 0;
 }
-.content img {
-  max-width: 100%;
-  height: auto;
+
+.card > img {
+  width: 250px;
 }
 .flexbox {
   display: flex;

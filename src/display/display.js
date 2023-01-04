@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Game from './game/game';
 
-const Display = () => {
-
+const Display = (props) => {
+  console.log('Display rendered. props are: ', props);
   return(
     <div>
       <div className="wrap" id="gap">
@@ -31,12 +32,8 @@ const Display = () => {
           <div className="corner"></div>
         </div>
         <div className="content">
-          {/* <!-- Begin content area. --> */}
-          <h1>Hello</h1>
 
-          <h2>Welcome to LCARS &#149; Classic Theme</h2>
-
-          <p>Live long and prosper.</p>
+          <Game cards={props.cards} clickCard={props.clickCard}/>
           {/* <!-- End content area. --> */}
           
 
