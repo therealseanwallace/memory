@@ -285,6 +285,7 @@ a {
 
 .game {
   display: flex;
+  gap: 24px;
 }
 
 .button#top-left a {
@@ -468,7 +469,9 @@ a {
 .content > *:first-child {
   margin-top: 0;
 }
-
+.card {
+  max-width: 300px;
+}
 .card > img {
   width: 250px;
 }
