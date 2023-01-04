@@ -285,6 +285,7 @@ a {
 
 .game {
   display: flex;
+  gap: 24px;
 }
 
 .button#top-left a {
@@ -468,10 +469,45 @@ a {
 .content > *:first-child {
   margin-top: 0;
 }
+.card {
+  max-width: 300px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
 
+}
 .card > img {
   width: 250px;
+  border-radius: 24px;
+  margin-bottom: -24px;
 }
+.card-name {
+  margin-bottom: -24px;
+  padding: 0 8px;
+}
+
+.quote {
+  padding: 0 8px;
+  padding: 0.5em 10px;
+  margin-right: 64px;
+}
+
+.quote:before {
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.quote:after {
+  content: close-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
 .flexbox {
   display: flex;
   column-gap: 2vw;
