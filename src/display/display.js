@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Game from './game/game';
+import StartScreen from './startScreen';
 
 const Display = (props) => {
   console.log('Display rendered. props are: ', props);
+  let displayContent = null;
+  
+  if (props.gameActive) {
+    displayContent = <Game cards={props.cards} clickCard={props.clickCard} />
+  } else {
+    displayContent = <StartScreen startGame={props.startGame}/>
+  }
   return(
     <div>
       <div className="wrap" id="gap">
@@ -33,7 +41,7 @@ const Display = (props) => {
         </div>
         <div className="content">
 
-          <Game cards={props.cards} clickCard={props.clickCard}/>
+          {displayContent}
           {/* <!-- End content area. --> */}
           
 

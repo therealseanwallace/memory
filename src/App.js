@@ -48,6 +48,9 @@ const App = (props) => {
   };
 
   const clickCard = (e) => {
+    if (!gameActive) {
+      return;
+    }
     console.log("clickCard! e.target is: ", e.target);
     console.log("e.target.dataset.id is: ", e.target.dataset.id);
     const card = returnCardByID(e.target.dataset.id);
@@ -63,14 +66,14 @@ const App = (props) => {
     // check if round is complete and if so, increment level and get
     // new cards
     if (checkRoundComplete()) {
-      setCurrentLevel(currentLevel += 1);
+      setCurrentLevel((currentLevel += 1));
       if (currentLevel > highestLevel) {
         setHighestLevel(currentLevel);
       }
       const newCards = returnCards(currentLevel);
       setCards(newCards);
       console.log("cards is: ", cards);
-          } else {
+    } else {
       shuffleArray();
     }
 
@@ -82,18 +85,27 @@ const App = (props) => {
     );
   };
 
+  const startGame = () => {
+    setGameActive(true);
+  };
+
   return (
     <div>
       <Header
         gameActive={gameActive}
-        startGame={setGameActive}
+        startGame={startGame}
         currentLevel={currentLevel}
         currentScore={currentScore}
         highScore={highScore}
         highestLevel={highestLevel}
         resetGame={appResetGame}
       />
-      <Display cards={cards} clickCard={clickCard} />
+      <Display
+        cards={cards}
+        startGame={startGame}
+        clickCard={clickCard}
+        gameActive={gameActive}
+      />
     </div>
   );
 };
