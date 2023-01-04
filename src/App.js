@@ -48,6 +48,9 @@ const App = (props) => {
   };
 
   const clickCard = (e) => {
+    if (!gameActive) {
+      return;
+    }
     console.log("clickCard! e.target is: ", e.target);
     console.log("e.target.dataset.id is: ", e.target.dataset.id);
     const card = returnCardByID(e.target.dataset.id);
@@ -82,11 +85,15 @@ const App = (props) => {
     );
   };
 
+  const startGame = () => {
+    setGameActive(true);
+  }
+
   return (
     <div>
       <Header
         gameActive={gameActive}
-        startGame={setGameActive}
+        startGame={startGame}
         currentLevel={currentLevel}
         currentScore={currentScore}
         highScore={highScore}
