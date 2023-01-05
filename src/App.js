@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "./header/header";
 import Display from "./display/display";
-import resetGame from "./helpers/resetGame";
 import returnCards from "./helpers/returnCards";
 
 const App = (props) => {
@@ -17,7 +16,15 @@ const App = (props) => {
   let [showInstructions, setShowInstructions] = useState(false);
 
   console.log("App! cards are: ", cards);
-  const appResetGame = resetGame;
+
+  const resetGame = () => {
+    setGameActive(false);
+    setCurrentLevel(0);
+    setCurrentScore(0);
+    setCards(returnCards(currentLevel));
+    setLivesRemaining(3);
+    setGameOver(false);
+  }
 
   const returnCardByID = (id) => {
     for (let i = 0; i < cards.length; i++) {
@@ -118,7 +125,7 @@ const App = (props) => {
         currentScore={currentScore}
         highScore={highScore}
         highestLevel={highestLevel}
-        resetGame={appResetGame}
+        resetGame={resetGame}
         livesRemaining={livesRemaining}
       />
       <Display
@@ -129,6 +136,7 @@ const App = (props) => {
         gameOver={gameOver}
         showInstructions={showInstructions}
         displayInstructions={displayInstructions}
+        resetGame={resetGame}
       />
     </div>
   );

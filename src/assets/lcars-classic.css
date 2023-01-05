@@ -483,6 +483,12 @@ a {
   background-color: #000;
 }
 
+.game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .instructions-display {
   display: flex;
   flex-direction: column;
