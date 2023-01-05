@@ -22,36 +22,15 @@ const Header = (props) => {
         <div className="right-frame-top">
           <div className="banner">LCARS &#149; Online</div>
 
-          <div className="data-cascade-button-group">
-            <InfoDisplay
-              gameActive={props.gameActive}
-              currentLevel={props.currentLevel}
-              currentScore={props.currentScore}
-              highScore={props.highScore}
-              highestLevel={props.highestLevel}
-              livesRemaining={props.livesRemaining}
-            />
-            <div className="button-col">
-              <div className="button" id="top-left">
-                <input
-                  className="start-game"
-                  value="Start Game"
-                  onClick={() => props.startGame()}
-                  type="button"
-                />
-              </div>
-            </div>
-            <div className="button-col">
-              <div className="button" id="top-right">
-                <input
-                  className="reset-game"
-                  value="Reset Game"
-                  onClick={() => props.resetGame()}
-                  type="button"
-                />
-              </div>
-            </div>
-          </div>
+          <InfoDisplay
+            gameActive={props.gameActive}
+            currentLevel={props.currentLevel}
+            currentScore={props.currentScore}
+            highScore={props.highScore}
+            highestLevel={props.highestLevel}
+            livesRemaining={props.livesRemaining}
+          />
+
           <div className="top-corner-bg">
             <div className="top-corner"></div>
           </div>

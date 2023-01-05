@@ -5,7 +5,10 @@ const CurrentLevel = (props) => {
   const test = "test";
   return (
     <div>
-      <h4 className={"current-level"}>Current level: {props.currentLevel}</h4>
+      <h4 className={"current-level-title stats-title"}>
+        <>Current level:</>
+      </h4>
+      <p className="current-level-content">{props.currentLevel}</p>
     </div>
   );
 };

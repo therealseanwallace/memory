@@ -4,7 +4,10 @@ const HighScore = (props) => {
 
   return(
     <div>
-      <h4 className={"high-score"}>High score: {props.highScore}</h4>
+      <h4 className={"high-score-title stats-title"}>
+        <>Current score:</>
+      </h4>
+      <p className="high-score-content">{props.highScore}</p>
     </div>
   )
 }

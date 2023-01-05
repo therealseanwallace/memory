@@ -9,12 +9,20 @@ const InfoDisplay = (props) => {
   console.log("InfoDisplay rendered. props are: ", props);
 
   return (
-    <div className="info-display">
-      <CurrentLevel currentLevel={props.currentLevel} />
-      <CurrentScore currentScore={props.currentScore} />
-      <HighScore highScore={props.highScore} />
-      <HighestLevel highestLevel={props.highestLevel} />
-      <LivesRemaining livesRemaining={props.livesRemaining}/>
+    <div className="info-display-container">
+      <div className="info-display-left">
+        <CurrentScore currentScore={props.currentScore} />
+        <HighScore highScore={props.highScore} />
+      </div>
+      <div className="info-display-middle">
+        {" "}
+        <CurrentLevel currentLevel={props.currentLevel} />
+        <HighestLevel highestLevel={props.highestLevel} />
+      </div>
+
+      <div className="info-display-right">
+        <LivesRemaining livesRemaining={props.livesRemaining} />
+      </div>
     </div>
   );
 };

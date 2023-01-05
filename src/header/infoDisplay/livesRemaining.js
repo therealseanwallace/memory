@@ -7,7 +7,7 @@ switch (props.livesRemaining) {
   case 3:
     return (
       <div className="lives-remaining">
-        <h4>Lives remaining:</h4>
+        <h4 className="stats-title">Lives:</h4>
         <img src={CommBadge} className="comm-badge" alt="A life" />
         <img src={CommBadge} className="comm-badge" alt="A life" />
         <img src={CommBadge} className="comm-badge" alt="A life" />
@@ -16,7 +16,7 @@ switch (props.livesRemaining) {
   case 2:
     return (
       <div className="lives-remaining">
-        <h4>Lives remaining:</h4>
+        <h4 className="stats-title">Lives:</h4>
         <img src={CommBadge} className="comm-badge" alt="A life" />
         <img src={CommBadge} className="comm-badge" alt="A life" />
         <img src={CommBadgeGrey} className="comm-badge" alt="A lost life" />
@@ -25,7 +25,7 @@ switch (props.livesRemaining) {
   case 1:
     return (
       <div className="lives-remaining">
-        <h4>Lives remaining:</h4>
+        <h4 className="stats-title">Lives:</h4>
         <img src={CommBadge} className="comm-badge" alt="A life" />
         <img src={CommBadgeGrey} className="comm-badge" alt="A lost life" />
         <img src={CommBadgeGrey} className="comm-badge" alt="A lost life" />
@@ -34,7 +34,7 @@ switch (props.livesRemaining) {
   default:
     return (
       <div className="lives-remaining">
-        <h4>Lives remaining:</h4>
+        <h4 className="stats-title">Lives:</h4>
         <img src={CommBadgeGrey} className="comm-badge" alt="A lost life" />
         <img src={CommBadgeGrey} className="comm-badge" alt="A lost life" />
         <img src={CommBadgeGrey} className="comm-badge" alt="A lost life" />
