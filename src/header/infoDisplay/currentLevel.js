@@ -6,7 +6,7 @@ const CurrentLevel = (props) => {
   return (
     <div>
       <h4 className={"current-level-title stats-title"}>
-        <>Current level:</>
+        Current level:
       </h4>
       <p className="current-level-content">{props.currentLevel}</p>
     </div>

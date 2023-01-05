@@ -10,7 +10,7 @@ const App = (props) => {
   let [currentScore, setCurrentScore] = useState(0);
   let [highScore, setHighScore] = useState(0);
   let [highestLevel, setHighestLevel] = useState(0);
-  let [cards, setCards] = useState(returnCards(currentLevel));
+  let [cards, setCards] = useState([]);
   let [livesRemaining, setLivesRemaining] = useState(3);
   let [gameOver, setGameOver] = useState(false);
   let [showInstructions, setShowInstructions] = useState(false);
@@ -21,9 +21,9 @@ const App = (props) => {
     setGameActive(false);
     setCurrentLevel(0);
     setCurrentScore(0);
-    setCards(returnCards(currentLevel));
     setLivesRemaining(3);
     setGameOver(false);
+    setCards([]);
   }
 
   const returnCardByID = (id) => {
@@ -99,6 +99,7 @@ const App = (props) => {
 
   const startGame = () => {
     setGameActive(true);
+    setCards(returnCards(currentLevel));
   };
 
   const displayInstructions = () => {
