@@ -20,6 +20,25 @@ import WhaleProbe from "../assets/whaleProbe.webp";
 import LursaBetor from "../assets/lursaBetor.jpg";
 import Winn from "../assets/winn.webp";
 
+import Annorax from "../assets/annorax.webp";
+import Culluh from "../assets/culluh.webp";
+import Gorn from "../assets/gorn.webp";
+import JackTheRipper from "../assets/jackTheRipper.webp";
+import Kashyk from "../assets/kashyk.webp";
+import Kruge from "../assets/kruge.jpg";
+import Madred from "../assets/madred.webp";
+import MirrorKira from "../assets/mirrorKira.webp";
+import Mudd from "../assets/mudd.jpg";
+import NeuralParasiste from "../assets/neuralParasite.webp";
+import Parmen from "../assets/parmen.webp";
+import Seska from "../assets/seska.webp";
+import Soran from "../assets/soran.webp";
+import Talosians from "../assets/talosians.webp";
+import Thelev from "../assets/thelev.webp";
+import Tholians from "../assets/tholians.webp";
+import Vians from "../assets/vians.webp";
+import Yarnek from "../assets/yarnek.webp";
+
 const cards = [
   {
     id: 1,
@@ -121,6 +140,96 @@ const cards = [
     image: Winn,
     clicked: false,
   },
+  {
+    id: 21,
+    image: Annorax,
+    clicked: false,
+  },
+  {
+    id: 22,
+    image: Culluh,
+    clicked: false,
+  },
+  {
+    id: 23,
+    image: Gorn,
+    clicked: false,
+  },
+  {
+    id: 24,
+    image: JackTheRipper,
+    clicked: false,
+  },
+  {
+    id: 25,
+    image: Kashyk,
+    clicked: false,
+  },
+  {
+    id: 26,
+    image: Kruge,
+    clicked: false,
+  },
+  {
+    id: 27,
+    image: Madred,
+    clicked: false,
+  },
+  {
+    id: 28,
+    image: MirrorKira,
+    clicked: false,
+  },
+  {
+    id: 29,
+    image: Mudd,
+    clicked: false,
+  },
+  {
+    id: 30,
+    image: NeuralParasiste,
+    clicked: false,
+  },
+  {
+    id: 31,
+    image: Parmen,
+    clicked: false,
+  },
+  {
+    id: 32,
+    image: Seska,
+    clicked: false,
+  },
+  {
+    id: 33,
+    image: Soran,
+    clicked: false,
+  },
+  {
+    id: 34,
+    image: Talosians,
+    clicked: false,
+  },
+  {
+    id: 35,
+    image: Thelev,
+    clicked: false,
+  },
+  {
+    id: 36,
+    image: Tholians,
+    clicked: false,
+  },
+  {
+    id: 37,
+    image: Vians,
+    clicked: false,
+  },
+  {
+    id: 38,
+    image: Yarnek,
+    clicked: false,
+  },
 ];
 
 const returnUniqueCard = (resultsArray) => {
@@ -129,12 +238,12 @@ const returnUniqueCard = (resultsArray) => {
   }
   const randomIndex = Math.floor(Math.random() * cards.length);
   const card = cards[randomIndex];
-  const checkForMatch = resultsArray.find(obj => obj.id === card.id);
+  const checkForMatch = resultsArray.find((obj) => obj.id === card.id);
   if (checkForMatch) {
     return returnUniqueCard(resultsArray);
   }
   return deepCopy(card);
-}
+};
 
 const returnCards = (level) => {
   let numberOfCards = level + 3;
@@ -143,9 +252,7 @@ const returnCards = (level) => {
     resultsArray.push(returnUniqueCard(resultsArray));
   }
   return resultsArray;
-
 };
-
 
 export default returnCards;
 
