@@ -61,9 +61,7 @@ const App = (props) => {
     console.log("card is: ", card);
     if (!card.clicked) {
       setCurrentScore(currentScore + 100);
-      if (currentScore > highScore) {
-        setHighScore(currentScore);
-      }
+
     } else {
       setLivesRemaining(livesRemaining - 1);
 
@@ -105,7 +103,11 @@ const App = (props) => {
       setGameActive(false);
       setGameOver(true);
     };
-  }, [livesRemaining]);
+
+    if (currentScore > highScore) {
+      setHighScore(currentScore);
+    }
+  }, [livesRemaining, currentScore]);
 
   return (
     <div>
