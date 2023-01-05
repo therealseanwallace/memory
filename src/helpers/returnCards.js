@@ -20,7 +20,6 @@ import WhaleProbe from "../assets/whaleProbe.webp";
 import LursaBetor from "../assets/lursaBetor.jpg";
 import Winn from "../assets/winn.webp";
 
-
 const cards = [
   {
     id: 1,
@@ -60,7 +59,7 @@ const cards = [
   {
     id: 6,
     name: "Eddington",
-    quote: "All right, Javert. I'll give you what you want: me!" ,
+    quote: "All right, Javert. I'll give you what you want: me!",
     image: Eddington,
     clicked: false,
   },
@@ -161,16 +160,23 @@ const cards = [
     quote: "The Prophets' love is strong. So is their wrath.",
     image: Winn,
     clicked: false,
-  }
+  },
 ];
 
 const returnCards = (level) => {
   let numberOfCards = level + 3;
   const cardsToReturn = [];
   for (let i = 0; i < numberOfCards; i++) {
-    cardsToReturn.push(deepCopy(cards[i]));
+    let cardToPush = cards[Math.round(Math.random() * cards.length)];
+    while (cardsToReturn.find(card => card.id === cardToPush.id)) {
+      cardToPush = cards[Math.round(Math.random() * cards.length)];
+    }
+    const copyOfCard = deepCopy(cardToPush);
+    cardsToReturn.push(copyOfCard);
   }
   return cardsToReturn;
 };
 
 export default returnCards;
+
+//cardsToReturn.push(deepCopy(cards[(Math.round(Math.random() * cards.length))]));
