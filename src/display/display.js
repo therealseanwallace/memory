@@ -10,7 +10,7 @@ const Display = (props) => {
   if (props.gameActive) {
     displayContent = <Game cards={props.cards} clickCard={props.clickCard} />;
   } else if (props.gameOver) {
-    displayContent = <GameOver />;
+    displayContent = <GameOver resetGame={props.resetGame}/>;
   } else if (props.showInstructions) {
     displayContent = (
       <div className="instructions-display">
