@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const CurrentLevel = (props) => {
   console.log("CurrentLevel rendered. props are: ", props);

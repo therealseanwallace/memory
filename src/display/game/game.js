@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const Game = (props) => {
   console.log('Game rendered. props are: ', props);

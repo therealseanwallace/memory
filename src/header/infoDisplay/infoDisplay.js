@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CurrentLevel from "./currentLevel";
 import CurrentScore from "./currentScore";
 import HighScore from "./highScore";

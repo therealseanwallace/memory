@@ -4,7 +4,6 @@ import Display from "./display/display";
 import returnCards from "./helpers/returnCards";
 
 const App = (props) => {
-  let initialCardsState = [];
   let [gameActive, setGameActive] = useState(false);
   let [currentLevel, setCurrentLevel] = useState(0);
   let [currentScore, setCurrentScore] = useState(0);
@@ -115,7 +114,7 @@ const App = (props) => {
     if (currentScore > highScore) {
       setHighScore(currentScore);
     }
-  }, [livesRemaining, currentScore]);
+  }, [livesRemaining, currentScore, highScore]);
 
   return (
     <div>

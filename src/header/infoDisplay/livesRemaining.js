@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CommBadge from "../../assets/commBadge.png";
 import CommBadgeGrey from "../../assets/commBadgeGrey.png";
 
