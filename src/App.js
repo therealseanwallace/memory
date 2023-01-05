@@ -23,7 +23,7 @@ const App = (props) => {
       }
     }
   };
-
+    
   const shuffleArray = () => {
     const tempArray = cards;
     console.log("shuffleArray! tempArray is: ", tempArray);
