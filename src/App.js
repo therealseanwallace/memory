@@ -14,6 +14,7 @@ const App = (props) => {
   let [cards, setCards] = useState(returnCards(currentLevel));
   let [livesRemaining, setLivesRemaining] = useState(3);
   let [gameOver, setGameOver] = useState(false);
+  let [showInstructions, setShowInstructions] = useState(false);
 
   console.log("App! cards are: ", cards);
   const appResetGame = resetGame;
@@ -95,6 +96,10 @@ const App = (props) => {
     setGameActive(true);
   };
 
+  const displayInstructions = () => {
+    setShowInstructions(true);
+  }
+
   useEffect(() => {
     if (livesRemaining === 0) {
       setGameActive(false);
@@ -120,6 +125,8 @@ const App = (props) => {
         clickCard={clickCard}
         gameActive={gameActive}
         gameOver={gameOver}
+        showInstructions={showInstructions}
+        displayInstructions={displayInstructions}
       />
     </div>
   );

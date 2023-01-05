@@ -9,7 +9,7 @@ const StartScreen = (props) => {
         <button className="start-game" onClick={props.startGame}>
           Start Game
         </button>
-        <button className="instructions" onClick={props.showInstructions}>
+        <button className="instructions" onClick={props.displayInstructions}>
           Instructions
         </button>
       </div>
