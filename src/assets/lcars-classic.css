@@ -215,6 +215,10 @@ a {
 .info-display > div {
   height: 10%;
 }
+.comm-badge {
+  width: 24px;
+  margin-top: 24px;
+}
 .grid,
 .grid-2,
 .grid-1,
@@ -287,7 +291,7 @@ a {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-  
+
 }
 
 .button#top-left a {
