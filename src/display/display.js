@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Game from './game/game';
 import StartScreen from './startScreen';
+import GameOver from './gameOver';
 
 const Display = (props) => {
   console.log('Display rendered. props are: ', props);
@@ -8,6 +9,8 @@ const Display = (props) => {
   
   if (props.gameActive) {
     displayContent = <Game cards={props.cards} clickCard={props.clickCard} />
+  } else if (props.gameOver) {
+    displayContent = <GameOver />
   } else {
     displayContent = <StartScreen startGame={props.startGame}/>
   }

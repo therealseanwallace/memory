@@ -23,11 +23,13 @@ const Header = (props) => {
           <div className="banner">LCARS &#149; Online</div>
 
           <div className="data-cascade-button-group">
-            <InfoDisplay gameActive={props.gameActive}
-            currentLevel={props.currentLevel}
-            currentScore={props.currentScore}
-            highScore={props.highScore}
-            highestLevel={props.highestLevel}
+            <InfoDisplay
+              gameActive={props.gameActive}
+              currentLevel={props.currentLevel}
+              currentScore={props.currentScore}
+              highScore={props.highScore}
+              highestLevel={props.highestLevel}
+              livesRemaining={props.livesRemaining}
             />
             <div className="button-col">
               <div className="button" id="top-left">
@@ -41,7 +43,7 @@ const Header = (props) => {
             </div>
             <div className="button-col">
               <div className="button" id="top-right">
-              <input
+                <input
                   className="reset-game"
                   value="Reset Game"
                   onClick={() => props.resetGame()}

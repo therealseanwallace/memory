@@ -3,6 +3,7 @@ import CurrentLevel from "./currentLevel";
 import CurrentScore from "./currentScore";
 import HighScore from "./highScore";
 import HighestLevel from "./highestLevel";
+import LivesRemaining from "./livesRemaining";
 
 const InfoDisplay = (props) => {
   console.log("InfoDisplay rendered. props are: ", props);
@@ -13,6 +14,7 @@ const InfoDisplay = (props) => {
       <CurrentScore currentScore={props.currentScore} />
       <HighScore highScore={props.highScore} />
       <HighestLevel highestLevel={props.highestLevel} />
+      <LivesRemaining livesRemaining={props.livesRemaining}/>
     </div>
   );
 };

@@ -12,6 +12,9 @@ const App = (props) => {
   let [highScore, setHighScore] = useState(0);
   let [highestLevel, setHighestLevel] = useState(0);
   let [cards, setCards] = useState(returnCards(currentLevel));
+  let [livesRemaining, setLivesRemaining] = useState(3);
+  let [gameOver, setGameOver] = useState(false);
+
   console.log("App! cards are: ", cards);
   const appResetGame = resetGame;
 
@@ -60,6 +63,9 @@ const App = (props) => {
       if (currentScore > highScore) {
         setHighScore(currentScore);
       }
+    } else {
+      setLivesRemaining(livesRemaining - 1);
+
     }
     card.clicked = true;
 
@@ -89,6 +95,13 @@ const App = (props) => {
     setGameActive(true);
   };
 
+  useEffect(() => {
+    if (livesRemaining === 0) {
+      setGameActive(false);
+      setGameOver(true);
+    };
+  }, [livesRemaining]);
+
   return (
     <div>
       <Header
@@ -99,12 +112,14 @@ const App = (props) => {
         highScore={highScore}
         highestLevel={highestLevel}
         resetGame={appResetGame}
+        livesRemaining={livesRemaining}
       />
       <Display
         cards={cards}
         startGame={startGame}
         clickCard={clickCard}
         gameActive={gameActive}
+        gameOver={gameOver}
       />
     </div>
   );
