@@ -7,7 +7,7 @@ const Game = (props) => {
       {props.cards.map((card) => {
         return (
         <div className="card" key={card.id} data-id={card.id} onClick={props.clickCard}>
-          <img src={card.image} alt="A black tar-like pool in humanoid form" data-id={card.id}/>
+          <img src={card.image} data-id={card.id}/>
         </div>
         )
         

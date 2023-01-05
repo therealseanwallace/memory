@@ -10,7 +10,7 @@ const Display = (props) => {
   if (props.gameActive) {
     displayContent = <Game cards={props.cards} clickCard={props.clickCard} />;
   } else if (props.gameOver) {
-    displayContent = <GameOver resetGame={props.resetGame}/>;
+    displayContent = <GameOver resetGame={props.resetGame} />;
   } else if (props.showInstructions) {
     displayContent = (
       <div className="instructions-display">
@@ -86,13 +86,27 @@ const Display = (props) => {
               <div className="footer-inside">
                 <div className="footer-text">
                   <p>
-                    Content Copyright &#169; 2022 Your Name or Website Name or
-                    URL
+                    STAR TREK ® and its various marks are trademarks of &#169;
+                    Paramount Global and are used under the doctrine of fair use
+                    for personal and educational purposes. This site is not
+                    affiliated with or endorsed by Paramount Global in any way.
+                    All images used on this site are the property of Paramount
+                    Global and are used under the doctrine of fair use for
+                    personal and educational purposes.
                   </p>
                   <p>
                     LCARS Inspired Website Template designed &amp; developed by
-                    Jim Robertus
-                    <a href="https://www.thelcars.com">www.TheLCARS.com</a>.
+                    Jim Robertus at:
+                  </p>
+                  <p>
+                    <a href="https://www.thelcars.com">www.TheLCARS.com</a>
+                  </p>
+                  <p>
+                    Remaining content and code is &#169;{" "}
+                    <a href="https://github.com/therealseanwallace">
+                      Sean Patrick Wallace
+                    </a>{" "}
+                    2023.
                   </p>
                 </div>
               </div>
