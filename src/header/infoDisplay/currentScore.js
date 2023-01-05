@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const CurrentScore = (props) => {
-
-  return(
+  return (
     <div>
-      <h4 className={"current-score"}>Current score: {props.currentScore}</h4>
+      <h4 className={"current-score-title stats-title"}>
+        <>Current score:</>
+      </h4>
+      <p className="current-score-content">{props.currentScore}</p>
     </div>
-  )
-}
+  );
+};
 
 export default CurrentScore;
