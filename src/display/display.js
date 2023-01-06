@@ -15,7 +15,7 @@ const Display = (props) => {
     displayContent = (
       <div className="instructions-display">
         <h1>Instructions</h1>
-        <p>1. Click a bad guy's picture once per level.</p>
+        <p>1. Click each picture once per level.</p>
         <p>2. If you click a picture twice in a level, you lose a life.</p>
         <p>3. After you have clicked every picture, a new level will begin.</p>
         <input
