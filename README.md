@@ -1,6 +1,6 @@
 # A Star Trek-themed memory game built to practise functional components in React
 
-# [Live](https://therealseanwallace.github.io/weatherPlusPlus)
+# [Live](https://therealseanwallace.github.io/memory)
 
     
 ## Learning objectives:
